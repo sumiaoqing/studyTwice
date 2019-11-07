@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/life/index",
+    "pages/tourism/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar":
+  {
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"导航"
+      },
+      {
+        "pagePath":"pages/life/index",
+        "text":"生活"
+      },
+      {
+        "pagePath":"pages/tourism/index",
+        "text":"旅游"
+      }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+<!--components/study/index.wxml-->
+<text>{{hah}}</text>
+<text>{{arr}}</text>

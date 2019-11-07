@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "study-cmp":"/components/study/index"
+  }
+}

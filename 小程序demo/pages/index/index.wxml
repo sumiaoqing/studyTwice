@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
- <study-cmp />
+<!-- 自定义组件 -->
+ <study-cmp  />
  <text bindtap="onStudy">study-cmp</text>
 </view>

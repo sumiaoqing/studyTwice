@@ -1,50 +1,41 @@
-// components/study/index.js
-
-import {
-  HTTP
-} from '../../utils/http.js'
-
-let http = new HTTP()
-
-Component({
-  // 组件的属性列表
-  properties: {
-    hah1: Array
-  },
+// pages/about/index.js
+Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    hah: 'hffh',
-    save:'',
-    arr: []
+    save: 'save',
+    happy: 'happy',
+    testObj: {}
   },
-  lifetimes: {
-    attached: function() {
-      http.request("POST", "/moods/add", {
-        title: "我的亚索贼ddd6",
-        comment: "哈撒给ffff",
-        time: "2019-3-17"
-      }, (res => {
-        console.log(res)
-      }))
-
-    }
-  },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-  
+    //传递单个参数的接收
+    // this.setData({
+    //   save: options.id,
+    //   happy:options.happy
+    // })
+    // console.log(this.data.save)
+    // console.log(this.data.happy)
+
+    //传递对象的接受
+    this.setData({
+      testObj: JSON.parse(options.testobj)
+    })
+    console.log(typeof this.data.testObj)
+    // console.log(typeof options.testobj);
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {},
+  onReady: function() {
+
+  },
 
   /**
    * 生命周期函数--监听页面显示
@@ -86,10 +77,5 @@ Component({
    */
   onShareAppMessage: function() {
 
-  }
-  ,
-  methods:
-  {
-   
   }
 })

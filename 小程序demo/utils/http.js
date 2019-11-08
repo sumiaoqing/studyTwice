@@ -6,26 +6,26 @@ class HTTP {
   constructor() {
     this.baseUrl = config.api_blink_url
   }
-  request(obj) {
+  request(type="GET",api_router,data={},cb) {
     let that = this
     wx.request({
-      url: `${that.baseUrl}${obj.api_router}`,
-      data: obj.data,
-      method: obj.type,
+      url: `${that.baseUrl}${api_router}`,
+      data: data,
+      method: type,
       header: {
         'content-type': 'application/json'
       },
-      success:(res)=>
-      {
-        console.log(res)
-        obj.success && obj.success(res.data)
+      success: (res) => {
+        console.log(res.data)
+        typeof cb=="function" && cb(res.data)
       },
-      fail:(err)=>
-      {
+      fail: (err) => {
         console.log(err)
       }
     })
   }
 }
 
-export {HTTP}
+export {
+  HTTP
+}

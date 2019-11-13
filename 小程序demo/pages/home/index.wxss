@@ -1,0 +1,105 @@
+/**index.wxss**/
+
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-search-bar {
+  height: 100rpx;
+  width: 100%;
+}
+
+.layout-search-bar-form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-bar {
+  background-color: #efeff4;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  border-radius: 40rpx;
+}
+
+.layout-search-icon {
+  position: absolute;
+  height: 100rpx;
+  line-height: 100rpx;
+  left: 70rpx;
+}
+
+.layout-main-content {
+  flex: 1;
+  /* background-color: blue; */
+}
+
+.top-tab-control {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+}
+
+.popular-left {
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+   color: 	 #9494b8;
+  font-family: "NSimSun";
+  font-size: 35rpx;
+}
+
+.handpick-right {
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+   color: 	 #9494b8;
+  font-family: "NSimSun";
+  font-size: 35rpx;
+}
+
+
+.tabSelected {
+  border-bottom: 1px solid #808080;
+}
+
+.layout-tab-swiper
+{
+  margin-top: 1rpx;
+  height: calc(100% - 80rpx);
+  flex: 1;
+}
+
+swiper{
+  height: 100%;
+}
+
+.swiper-module
+{
+  display: flex;
+flex-direction: column;
+}
+
+.swiper-module-content
+{
+ flex: auto;
+    border-top: 0.5rpx solid #efeff4;
+  border-bottom: 0.5rpx solid #efeff4;
+}

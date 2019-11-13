@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="layout">
+
+    <view class="layout-search-bar">
+      <view class="layout-search-bar-form">
+        <icon class="iconfont icon-sousuokuang layout-search-icon" />
+        <input type="text" class="search-bar" disabled="disabled" />
+      </view>
+    </view>
+
+    <view class="layout-main-content">
+      <!-- 自定义组件 -->
+      <!-- <study-cmp  /> -->
+      <!-- <text bindtap="onStudy">study-cmp</text> -->
+
+      <view class="top-tab-control">
+        <view class=' {{currentData==0?"tabSelected":""}} popular-left' data-current="0" bindtap="selectCurrentData">热门</view>
+        <view class=' {{currentData==1?"tabSelected":""}} handpick-right' data-current="1" bindtap="selectCurrentData">精选</view>
+      </view>
+
+      <view class="layout-tab-swiper">
+        <swiper current="{{currentData}}" bindchange="swiperChange">
+          <swiper-item class="swiper-module">
+            <view wx:for="{{popularContent}}" class="swiper-module-content">{{index}}</view>
+          </swiper-item >
+          <swiper-item class="swiper-module">精选内容</swiper-item>
+        </swiper>
+      </view>
+
+
+
+
+    </view>
+
+
+
+
+  </view>
+</view>

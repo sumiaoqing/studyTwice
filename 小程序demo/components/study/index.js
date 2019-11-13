@@ -22,13 +22,13 @@ Component({
   },
   lifetimes: {
     attached: function() {
-      http.request("POST", "/moods/add", {
-        title: "我的亚索贼ddd6",
-        comment: "哈撒给ffff",
-        time: "2019-3-17"
-      }, (res => {
-        console.log(res)
-      }))
+      // http.request("POST", "/moods/add", {
+      //   title: "我的亚索贼ddd6",
+      //   comment: "哈撒给ffff",
+      //   time: "2019-3-17"
+      // }, (res => {
+      //   console.log(res)
+      // }))
 
     }
   },

@@ -13,7 +13,8 @@ Page({
       test: 'test'
     },
     currentData: 0,
-    popularContent:[1,2,3,4]
+    popularContent:[1,2,3,4],
+    homePageAmount:4,
   },
   onStudy: function() {
     // 传递单个参数
@@ -38,11 +39,11 @@ Page({
   //控制选项卡内容更改
   swiperChange: function(e) {
     const that = this
-    if (that.data.currentData === e.currentTarget.dataset.current) {
+    if (that.data.currentData === e.detail.current) {
       return
     } else {
       that.setData({
-        currentData: e.currentTarget.dataset.current
+        currentData: e.detail.current
       })
     }
   }

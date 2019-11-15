@@ -46,5 +46,13 @@ Page({
         currentData: e.detail.current
       })
     }
+  },
+  //主页面搜索框的内容
+  homeSearch:function()
+  {
+console.log('主页搜索框')
+wx.navigateTo({
+      url: '../home-search/index'
+    })
   }
 })

@@ -3,7 +3,8 @@
     "pages/home/index",
     "pages/subarea/index",
     "pages/mine/index",
-    "pages/about/index"
+    "pages/about/index",
+    "pages/home-search/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

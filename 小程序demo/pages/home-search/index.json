@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "search-bar-cmp": "/components/search-bar/index"
+  }
+}

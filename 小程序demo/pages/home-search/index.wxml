@@ -1,0 +1,38 @@
+<!--pages/home-search/index.wxml-->
+<view class="jump-search-page">
+
+<view class="jump-search-bar">
+
+<view class="search-bar-input">
+<search-bar-cmp/>
+</view>
+<view class="serach-cancel">取消</view>
+
+</view>
+
+<view class="everybody-search">
+
+<view class="everybody-search-title">大家都在搜</view>
+<view class="everybody-search-main">
+<span class="search-block"  wx:for="{{everybodySearch}}" wx:for-item="searchName" wx:key="{{item}}">{{searchName}}</span>
+</view>
+
+
+</view>
+
+<view class="search-history">
+
+<view class="search-history-title">搜索历史</view>
+
+<view class="search-history-content">搜索内容 </view>
+
+<view class="clear-history-message">清除历史消息</view>
+<view class="clear-history-message">清除历史消息</view>
+<view class="clear-history-message">清除历史消息</view>
+<view class="clear-history-message">清除历史消息</view>
+<view class="clear-history-message">清除历史消息</view>
+</view>
+
+
+
+</view>

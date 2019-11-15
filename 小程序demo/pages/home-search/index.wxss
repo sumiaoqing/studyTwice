@@ -1,0 +1,83 @@
+/* pages/home-search/index.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.jump-search-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.jump-search-bar {
+  display: flex;
+  flex-direction: row;
+  height: 120rpx;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1rpx solid #efeff4;
+}
+
+.search-bar-input {
+  flex: 0.85;
+  padding-left: 30rpx;
+  /* padding-right: 10rpx; */
+}
+
+.serach-cancel {
+  flex: 0.15;
+  text-align: center;
+  font-family: "SimSun";
+  font-size: 30rpx;
+  color: #808080;
+}
+
+.everybody-search {
+  height: 330rpx;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.everybody-search-title {
+  height: 50rpx;
+  font-size: 28rpx;
+  font-family: "STHeiti";
+  padding-top: 40rpx;
+  padding-left: 10rpx;
+}
+
+.everybody-search-main {
+  flex: 1;
+}
+
+.search-block {
+  font-size: 25rpx;
+  background-color: #efeff4;
+  /* border: 1rpx solid blue; */
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-bottom: 20rpx;
+  display: inline-block;
+}
+
+.search-history
+{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-history-title
+{
+   height: 40rpx;
+  font-size: 28rpx;
+  font-family: "STHeiti";
+  padding-left: 10rpx;
+
+}

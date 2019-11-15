@@ -3,7 +3,7 @@
   <view class="layout">
 
     <view class="layout-search-bar">
-      <view class="layout-search-bar-form">
+      <view class="layout-search-bar-form" bindtap="homeSearch">
         <icon class="iconfont icon-sousuokuang layout-search-icon" />
         <input type="text" class="search-bar" disabled="disabled" />
       </view>

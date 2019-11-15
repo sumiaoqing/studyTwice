@@ -1,0 +1,13 @@
+<!--components/search-bar/index.wxml-->
+<view class="search-bar-component">
+
+<view class="search-bar-left"></view>
+
+<view class="search-bar-middle">
+<input type="text" class="search-bar"  />
+</view>
+
+<view class="search-bar-right"></view>
+
+
+</view>

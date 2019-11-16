@@ -4,7 +4,8 @@ let Yasuo=require('../model/yasuo')
 
 router.get('/yasuo',(req,res)=>
 {
-    // console.log('iii')
+    console.log('iii')
+    res.json({"n":"j"})
     // YASUO.find().then((yasuo)=>
     // {
     //     console.log('111')
@@ -18,6 +19,7 @@ router.get('/yasuo',(req,res)=>
 
 router.post('/yasuo-add',(req,res)=>
 {
+    console.log('ooo')
         let yasuoModel =  new Yasuo({"name":"yasuo","sex":"男","skill":["东","南"],isBuy:true});
         yasuoModel.save().then(yasuo=>
             {

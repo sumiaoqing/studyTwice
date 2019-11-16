@@ -2,13 +2,15 @@ let express =require('express')
 let app =express()
 let bodyParser=require('body-parser')
 
-const mongoDB = 'mongodb://127.0.0.1/hero';
+const mongoDB = require('./database')
 
 //连接monog数据库
 let mongoose=require('mongoose')
 
 //路由
 let yasuo=require('./route/yasuo')
+let homedata=require('./route/homeData')
+let ebsearch=require('./route/everybodySearch')
 
 //post请求
 app.use(bodyParser.urlencoded({extended:false}))
@@ -16,14 +18,21 @@ app.use(bodyParser.json())
 
 
 app.use('/hero',yasuo)
-mongoose.connect(mongoDB);
+app.use('/home',homedata)
+app.use('/search',ebsearch)
+
+mongoose.connect(mongoDB)
 // 让 mongoose 使用全局 Promise 库
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise
 // 取得默认连接
-const db = mongoose.connection;
+const db = mongoose.connection
 
 // 将连接与错误事件绑定（以获得连接错误的提示）
-db.on('error', console.error.bind(console, 'MongoDB 连接错误：'));
+db.on('error', console.error.bind(console, 'MongoDB 连接错误：'))
+
+
+//设置静态托管文件目录
+app.use('/public',express.static('public'))
 
 
 app.listen(3000,()=>

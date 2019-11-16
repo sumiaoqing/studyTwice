@@ -35,7 +35,7 @@
 
                 <view class="home-Block-content">
                 <view class="home-Block-content-main">
-                  <view class="Block-content-title">主页标题主页标题主页标题主页标题页标题主页标题</view>
+                  <view class="Block-content-title">{{homePageAmount[index].homeTitle}}</view>
                   <view class="Block-content-tag">主页标签</view>
                   <view class="Block-content-nickname">主页用户昵称</view>
                   <view class="Block-content-updatetime">上传时间</view>

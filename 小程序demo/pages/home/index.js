@@ -14,7 +14,7 @@ Page({
     },
     currentData: 0,
     popularContent:[1,2,3,4],
-    homePageAmount:4,
+    homePageAmount: [{ "homeTitle": "主页标题1", "homeTag": "主页标签", "homeAvatarUrl": "主页头像地址", "homeNickName": "用户主页名称", "homeUploadTime": 2014 - 11 - 13, "homeRemark": "主页备注", "homeComment": "主页内容", "homeImgPath": "主页静态图片" }, { "homeTitle": "主页标题2", "homeTag": "主页标签", "homeAvatarUrl": "主页头像地址", "homeNickName": "用户主页名称", "homeUploadTime": 2014 - 11 - 13, "homeRemark": "主页备注", "homeComment": "主页内容", "homeImgPath": "主页静态图片" }, { "homeTitle": "主页标题3", "homeTag": "主页标签", "homeAvatarUrl": "主页头像地址", "homeNickName": "用户主页名称", "homeUploadTime": 2014 - 11 - 13, "homeRemark": "主页备注", "homeComment": "主页内容", "homeImgPath": "主页静态图片" }, { "homeTitle": "主页标题4", "homeTag": "主页标签", "homeAvatarUrl": "主页头像地址", "homeNickName": "用户主页名称", "homeUploadTime": 2014 - 11 - 13, "homeRemark": "主页备注", "homeComment": "主页内容", "homeImgPath": "主页静态图片" }],
   },
   onStudy: function() {
     // 传递单个参数

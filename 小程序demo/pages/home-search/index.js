@@ -1,11 +1,16 @@
 // pages/home-search/index.js
+
+import {HTTP} from '../../utils/http.js'
+
+let http=new HTTP()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    everybodySearch: ['疾风剑豪', '麦林炮手', '诡术妖姬', '弗雷尔卓德之心', '蛮族之王', '德玛西亚之力', '德玛西亚皇子', '生化魔人', '黑暗之女']
+    everybodySearch: []
 
   },
 
@@ -13,7 +18,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+ http.request('GET','/search',{},(res)=>
+ {
+  this.setData({
+    everybodySearch:res.everybodySearch
+  })
+ })
   },
 
   /**

@@ -1,2 +1,2 @@
-# studyTwice
-twice option
+# 一个基于node+mongodb的小程序项目
+

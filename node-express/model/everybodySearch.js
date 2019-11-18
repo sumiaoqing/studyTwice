@@ -4,7 +4,7 @@ let Schema=mongoose.Schema
 
 let everybodySearchSchema=new Schema(
     {
-      searchTag:Array//大家都在搜索
+      searchTag:[]//大家都在搜索
     }
 )
 

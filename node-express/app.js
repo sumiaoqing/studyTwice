@@ -11,15 +11,17 @@ let mongoose=require('mongoose')
 let yasuo=require('./route/yasuo')
 let homedata=require('./route/homeData')
 let ebsearch=require('./route/everybodySearch')
+let personals=require('./route/personalSearch')
 
 //post请求
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
 
-app.use('/hero',yasuo)
-app.use('/home',homedata)
-app.use('/search',ebsearch)
+app.use('/api',yasuo)
+app.use('/api',homedata)
+app.use('/api',ebsearch)
+app.use('/api',personals)
 
 mongoose.connect(mongoDB)
 // 让 mongoose 使用全局 Promise 库

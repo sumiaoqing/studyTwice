@@ -7,7 +7,7 @@
 <view class="search-bar-input">
 <search-bar-cmp/>
 </view>
-<view class="serach-cancel">取消</view>
+<view class="serach-cancel" bindtap="cancelSearch">取消</view>
 
 </view>
 
@@ -27,8 +27,8 @@
 
 <view class="search-history-content" wx:for="{{searchHistory}}" wx:key="{{item._id}}">
 <view class="search-content-left"><icon class="iconfont icon-shizhong" /></view>
-<view class="search-content-middle">{{item.searchHistory}}</view>
-<view class="search-content-right" bindtap="deleteSearch" data-deletesearch="{{item}}"><icon class="iconfont icon-cross" /></view>
+<view class="search-content-middle" bindtap="historyJump" data-historyJump="{{item.searchHistory}}">{{item.searchHistory}}</view>
+<view class="search-content-right" bindtap="deleteSearch" data-deletesearch="{{item._id}}"><icon class="iconfont icon-cross" /></view>
 </view>
 
 <view class="clear-history-message" bindtap="isClearHistory">清除搜索历史</view>

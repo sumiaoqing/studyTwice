@@ -31,7 +31,7 @@ Component({
 
 
     },
-   //将搜素记录传递过去
+   //将搜索记录传递过去
     postPersonal:function(e)
     {
       let userSearchTime = new Date()

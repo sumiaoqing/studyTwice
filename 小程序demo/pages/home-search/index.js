@@ -22,21 +22,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    // let user = wx.getStorageSync('userNickName')
-    // console.log(user)
-
-    http.request('GET', '/search', {}, (res) => {
-      this.setData({
-        everybodySearch: res[0].searchTag
-      })
-    })
-
-
-    this.getPersonal();
-
-
-
+    
   },
+
+
+
   //获取个人记录的接口
   getPersonal: function() {
     http.request('GET', '/personal', {}, (res) => {
@@ -58,7 +48,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    http.request('GET', '/search', {}, (res) => {
+      this.setData({
+        everybodySearch: res[0].searchTag
+      })
+    })
+    this.getPersonal();
   },
 
   /**
@@ -95,28 +90,63 @@ Page({
   onShareAppMessage: function() {
 
   },
+  //取消搜索
+  cancelSearch:function()
+  {
+    console.log('hah')
+    // wx.navigateTo({
+    //   url: '../home/index'
+    // })
+
+  },
   //点击标签搜素
   tagSearch: function(e) {
-    console.log(e.currentTarget.dataset.searchtag)
+    this.postEverybodySearch(e)
     wx.navigateTo({
       url: `../search-completed/index?search=${e.currentTarget.dataset.searchtag}`
     })
   },
+  //将大家都在搜的标签加入历史记录
+  postEverybodySearch(e) {
+    let userSearchTime = new Date()
+    let userNickName = wx.getStorageSync('userNickName')
+    http.request("POST", "/personal-add", {
+      "searchNickName": userNickName,
+      "searchHistory": e.currentTarget.dataset.searchtag,
+      "searchTime": userSearchTime
+    }, (res) => {})
+  },
   //点击×标志，删除搜索历史记录
   deleteSearch: function(e) {
-    let temporary = this.data.searchHistory.filter(item => item.searchNickName != e.currentTarget.dataset.deletesearch.searchNickName)
-    this.setData({
-      searchHistory: temporary
+    console.log(e.currentTarget.dataset.deletesearch)
+    http.request('DELETE', '/personal-delete', {
+      "_id": e.currentTarget.dataset.deletesearch
+    }, (res) => {
+      //未解决小程序的页面不刷新！important
     })
-    //后续应该是操作接口的操作，暂时不写
   },
   isClearHistory: function() {
-    this.setData({
-      searchHistory: []
-    })
+    this.deleteHistory()
     this.setData({
       isSearchExist: false
     })
     //后续也是接口操作，暂时不写
+  },
+  //清除历史记录接口函数
+  deleteHistory: function() {
+    this.deleteHistoryRequest()
+  },
+  //清除搜索历史的接口请求
+  deleteHistoryRequest: function() {
+    let userNickName = wx.getStorageSync('userNickName')
+    http.request('DELETE', '/personal-delete', {
+      "searchNickName": userNickName
+    })
+  },
+  //点击搜索历史跳转
+  historyJump: function(e) {
+    wx.navigateTo({
+      url: `../search-completed/index?search=${e.currentTarget.dataset.historyjump}`
+    })
   }
 })

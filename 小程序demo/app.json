@@ -4,7 +4,9 @@
     "pages/subarea/index",
     "pages/mine/index",
     "pages/about/index",
-    "pages/home-search/index"
+    "pages/home-search/index",
+    "pages/search-completed/index",
+    "pages/search-details/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

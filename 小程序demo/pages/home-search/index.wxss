@@ -81,3 +81,42 @@ page {
   padding-left: 10rpx;
 
 }
+
+.search-history-content
+{
+display: flex;
+flex-direction: row;
+border-bottom:1rpx solid #efeff4;
+padding-top: 5rpx;
+padding-bottom: 5rpx;
+}
+
+.search-content-left
+{
+  flex:0.7;
+  padding-left: 10rpx;
+}
+
+.search-content-middle
+{
+  flex:8.3;
+  padding-top: 15rpx;
+  font-size: 28rpx;
+  color:  #29293d;
+}
+
+.search-content-right
+{
+  flex:1;
+}
+
+.clear-history-message
+{
+  height: 70rpx;
+  /* background-color: red; */
+  width: 100%;
+  text-align: center;
+  color: #9494b8;
+  font-size: 26rpx;
+  line-height: 70rpx;
+}

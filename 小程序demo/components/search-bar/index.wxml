@@ -1,10 +1,14 @@
 <!--components/search-bar/index.wxml-->
 <view class="search-bar-component">
 
-<view class="search-bar-left"></view>
+<view class="search-bar-left">
+<view class="search-bar-left-icon">
+<icon class="iconfont icon-sousuokuang " />
+</view>
+</view>
 
 <view class="search-bar-middle">
-<input type="text" class="search-bar"  />
+<input type="text" class="search-bar" value="{{inputSearch}}" bindconfirm="searchContent" />
 </view>
 
 <view class="search-bar-right"></view>

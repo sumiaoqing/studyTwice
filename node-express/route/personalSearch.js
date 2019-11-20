@@ -4,8 +4,12 @@ let PersonalHistory=require('../model/personalHistory')
 
 router.get('/personal',(req,res)=>
 {
-    PersonalHistory.find({searchNickName: "鲸落"}).sort({searchTime:-1}).then(data=>{})
-        res.json(data)
+    console.log( req.session.username)
+    let searchNickName=req.session.username
+    PersonalHistory.find({searchNickName: searchNickName}).sort({searchTime:-1}).then(data=>{
+         res.json(data)
+    })
+       
 })
 
 router.post('/personal-add',(req,res)=>

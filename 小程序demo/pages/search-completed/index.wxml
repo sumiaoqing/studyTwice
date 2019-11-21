@@ -1,2 +1,44 @@
 <!--pages/search-completed/index.wxml-->
-<text>pages/search-completed/index.wxml</text>
+<view class="search-completed">
+
+<view class="search-completed-top">
+
+<view class="search-completed-input">
+<search-bar-cmp/>
+</view>
+<view class="search-complated-cancel" bindtap="cancelSearch">取消</view>
+
+
+</view>
+
+<view class="search-completed-bottom">
+
+ <view class="search-complated-control">
+        <view class=' {{currentData==0?"tabSelected":""}} search-complated-left' data-current="0" bindtap="selectCurrentData">人们</view>
+        <view class=' {{currentData==1?"tabSelected":""}}  search-complated-mid' data-current="1" bindtap="selectCurrentData">精选</view>
+        <view class=' {{currentData==2?"tabSelected":""}}  search-complated-right' data-current="2" bindtap="selectCurrentData">精选方法</view>
+      </view>
+<view>
+<swiper current="{{currentData}}" bindchange="swiperChange" >
+
+<swiper-item>
+999
+</swiper-item>
+
+
+<swiper-item>2222
+</swiper-item>
+
+
+<swiper-item>
+888
+</swiper-item>
+
+
+</swiper>
+</view>
+
+</view>
+
+
+</view>

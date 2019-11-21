@@ -52,7 +52,8 @@ Page({
   {
 console.log('主页搜索框')
 wx.navigateTo({
-      url: '../home-search/index'
+      url: '../home-search/index'  
+      //  url: '../search-completed/index'
     })
   }
 })

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    currentData:0,
+    swiperData: [{ "name": "999" }, { "name": "nufff" }]
   },
 
   /**
@@ -63,5 +64,23 @@ console.log(options)
    */
   onShareAppMessage: function () {
 
+  },
+  swiperChange:function(e)
+  {
+    const that = this
+    if (that.data.currentData === e.detail.current) {
+      return
+    } else {
+      that.setData({
+        currentData: e.detail.current
+      })
+    }
+  },
+  selectCurrentData:function(e)
+  {
+    const that = this
+    that.setData({
+      currentData: e.currentTarget.dataset.current
+    })
   }
 })

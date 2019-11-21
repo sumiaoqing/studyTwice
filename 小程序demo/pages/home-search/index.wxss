@@ -22,6 +22,7 @@ page {
 .search-bar-input {
   flex: 0.85;
   padding-left: 30rpx;
+  height: 45rpx;
   /* padding-right: 10rpx; */
 }
 

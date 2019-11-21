@@ -3,7 +3,7 @@
 
 <view class="search-bar-left">
 <view class="search-bar-left-icon">
-<icon class="iconfont icon-sousuokuang " />
+<icon class="iconfont icon-sousuokuang icon-show-size" />
 </view>
 </view>
 

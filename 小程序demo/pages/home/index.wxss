@@ -40,7 +40,7 @@ page {
   position: absolute;
   height: 100rpx;
   line-height: 100rpx;
-  left: 70rpx;
+  left: 55rpx;
 }
 
 .layout-main-content {

@@ -1,1 +1,96 @@
 /* pages/search-completed/index.wxss */
+
+page
+{
+  width: 100%;
+  height: 100%
+}
+
+.search-completed
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-completed-top
+{
+  height: 120rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1rpx solid #efeff4;
+}
+
+.search-completed-input
+{
+    flex: 0.85;
+  padding-left: 30rpx;
+}
+
+.search-complated-cancel
+{
+   flex: 0.15;
+  text-align: center;
+  font-family: "SimSun";
+  font-size: 30rpx;
+  color: #808080;
+}
+
+
+
+.search-completed-buttom
+{
+  flex: 1;
+}
+
+.search-complated-control
+{
+   width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+}
+
+
+
+.tabSelected {
+  border-bottom: 1rpx solid #808080;
+}
+
+.search-complated-left
+{
+   flex: 3;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #9494b8;
+  font-family: "NSimSun";
+  font-size: 35rpx;
+}
+
+.search-complated-mid
+{
+   flex: 3;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #9494b8;
+  font-family: "NSimSun";
+  font-size: 35rpx;
+}
+
+.search-complated-right
+{
+   flex: 3;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #9494b8;
+  font-family: "NSimSun";
+  font-size: 35rpx;
+}
+

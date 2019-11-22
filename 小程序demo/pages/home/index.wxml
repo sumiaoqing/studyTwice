@@ -22,23 +22,23 @@
       <view class="layout-tab-swiper">
         <swiper current="{{currentData}}" bindchange="swiperChange">
           <swiper-item class="swiper-module">
-            <view wx:for="{{homePageAmount}}" class="swiper-module-content">
+            <view wx:for="{{homePageAmount}}" class="swiper-module-content" bindtap="jumpDetails" data-detail="{{item}}">
 
               <view class="home-Block">
 
                 <view class="home-Block-img">
                   <view class="block-img-show">
-                    <image src="http://localhost:3000/public/home-img/jianji.jpg" class="img-show"></image>
+                    <image src="{{item. homeImgPath}}" class="img-show"></image>
                   </view>
                 </view>
 
 
                 <view class="home-Block-content">
                 <view class="home-Block-content-main">
-                  <view class="Block-content-title">{{homePageAmount[index].homeTitle}}</view>
-                  <view class="Block-content-tag">主页标签</view>
-                  <view class="Block-content-nickname">主页用户昵称</view>
-                  <view class="Block-content-updatetime">上传时间</view>
+                  <view class="Block-content-title">{{item.homeTitle}}</view>
+                  <view class="Block-content-tag"><span class="content-tag-text">{{item.homeTag}}</span></view>
+                  <view class="Block-content-nickname">{{item.homeNickName}}</view>
+                  <view class="Block-content-updatetime">{{item.homeUploadTime}}</view>
                 </view>
                 </view>
               </view>

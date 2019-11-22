@@ -4,8 +4,8 @@ let Yasuo=require('../model/yasuo')
 
 router.get('/yasuo',(req,res)=>
 {
-    console.log('iii')
-    res.json({"n":"j"})
+    console.log(req.session.username)
+    res.json({"n":   'ooo'})
     // YASUO.find().then((yasuo)=>
     // {
     //     console.log('111')

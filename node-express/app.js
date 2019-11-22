@@ -24,11 +24,12 @@ app.use(session({
     saveUninitialized:true,
 }))
 
+app.use('/api',sessionapi)
 app.use('/api',yasuo)
 app.use('/api',homedata)
 app.use('/api',ebsearch)
 app.use('/api',personals)
-app.use('/api',sessionapi)
+
 
 mongoose.connect(mongoDB)
 // 让 mongoose 使用全局 Promise 库

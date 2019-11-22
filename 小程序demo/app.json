@@ -16,18 +16,26 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "selectedColor": "#c6538c",
+    "color": "#cdcdcd",
     "list": [
       {
         "pagePath": "pages/home/index",
-        "text": "首页"
+        "text": "首页",
+        "selectedIconPath": "/image/home1.png",
+        "iconPath": "/image/home0.png"
       },
       {
         "pagePath": "pages/subarea/index",
-        "text": "分区"
+        "text": "分区",
+        "selectedIconPath": "/image/tab1.png",
+        "iconPath": "/image/tab0.png"
       },
       {
         "pagePath": "pages/mine/index",
-        "text": "我的"
+        "text": "我的",
+        "selectedIconPath": "/image/mine1.png",
+        "iconPath": "/image/mine0.png"
       }
     ]
   }

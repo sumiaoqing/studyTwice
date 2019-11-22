@@ -60,9 +60,9 @@ page {
   text-align: center;
   height: 80rpx;
   line-height: 80rpx;
-  color: #9494b8;
-  font-family: "NSimSun";
-  font-size: 35rpx;
+  color: #3c5959;
+  /* font-family: "NSimSun"; */
+  font-size: 32rpx;
 }
 
 .handpick-right {
@@ -70,13 +70,12 @@ page {
   text-align: center;
   height: 80rpx;
   line-height: 80rpx;
-  color: #9494b8;
-  font-family: "NSimSun";
-  font-size: 35rpx;
+  color: #3c5959;
+  font-size: 32rpx;
 }
 
 .tabSelected {
-  border-bottom: 1rpx solid #808080;
+  border-bottom: 1rpx solid #c6538c;
 }
 
 .layout-tab-swiper {
@@ -97,7 +96,7 @@ swiper {
 .swiper-module-content {
   flex: auto;
   border-top: 0.5rpx solid #efeff4;
-  border-bottom: 0.5rpx solid #efeff4;
+  /* border-bottom: 0.5rpx solid #efeff4; */
 }
 
 .home-Block {
@@ -147,9 +146,8 @@ swiper {
 }
 
 .Block-content-title {
-  flex: 0.4;
-  background-color: red;
-  font-size: 25rpx;
+  flex: 0.5;
+  font-size: 29rpx;
   /* overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -161,17 +159,24 @@ swiper {
 .Block-content-tag {
   flex: 0.1;
   width: 100%;
-  background-color: black;
-  font-size: 30rpx;
+  font-size: 26rpx;
+}
+
+.content-tag-text {
+  background-color: orange;
+  color: white;
+  display: inline-block;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
 }
 
 .Block-content-nickname {
   flex: 0.2;
-  font-size: 30rpx;
+  font-size: 27rpx;
 }
 
 .Block-content-updatetime {
-  flex: 0.3;
-  background-color: yellow;
-  font-size: 30rpx;
+  flex: 0.2;
+  font-size: 27rpx;
+  color: #808080;
 }

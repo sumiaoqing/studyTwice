@@ -173,6 +173,7 @@ swiper {
 .Block-content-nickname {
   flex: 0.2;
   font-size: 27rpx;
+   color: #808080;
 }
 
 .Block-content-updatetime {

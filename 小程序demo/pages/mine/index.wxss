@@ -1,1 +1,146 @@
 /* pages/tourism/index.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.mine-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mine-avatar {
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rpx solid #cdcdcd;
+}
+
+.mine-avatar-show {
+  flex: 7;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mine-avatar-show-border-radius {
+  width: 170rpx;
+  height: 170rpx;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 170rpx;
+}
+
+.mine-nickname-show {
+  flex: 3;
+  width: 100%;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-family: "STHeiti";
+  font-weight: 500;
+}
+
+.mine-watch-history {
+  height: 250rpx;
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+}
+
+.mine-watch-history-top {
+  height: 50rpx;
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: row;
+}
+
+.mine-watch-history-content {
+  flex: 7.8;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  padding-left: 10rpx;
+}
+
+.mine-watch-history-showmore {
+  flex: 2.2;
+  background-color: gold;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.mine-watch-history-showmore-title
+{
+  flex: 8.5;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  padding-left: 10rpx;
+}
+
+.mine-watch-history-showmore-iocn
+{
+  flex: 1.5;
+  height: 50rpx;
+}
+
+.icon-gengduo-size
+{
+  font-size: 40rpx !important;
+  height: 50rpx;
+}
+
+
+
+.mine-watch-history-bottom {
+  flex: 1;
+  background-color: rosybrown;
+}
+
+.mine-collection {
+  height: 250rpx;
+  background-color: indianred;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mine-collection-top {
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.mine-collection-title {
+  flex: 8;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  padding-left: 10rpx;
+}
+
+.mine-collection-showmore {
+  background-color: indigo;
+  flex: 2;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  padding-left: 10rpx;
+}
+
+.mine-collection-bottom {
+  flex: 1;
+  background-color: orchid;
+}
+
+.addvice-feedback {
+  flex: 1;
+  background-color: saddlebrown;
+  text-align: center;
+  padding-top: 80rpx;
+}

@@ -1,2 +1,38 @@
 <!--pages/search-details/index.wxml-->
-<text>pages/search-details/index.wxml</text>
+<!-- 引入模板 -->
+<import src="/wxParse/wxParse.wxml"/>
+
+<view class="search-details-main">
+
+<view class="search-flex-range">
+
+<view class="search-details-text">
+
+<view class="search-details-top">
+能奶能输出全能辅助 全面解析赛娜技巧
+</view>
+
+<view class="search-details-mid">
+<view class="search-details-mid-tag">[ 2019-11-20 17:59:20 来源：多玩LOL 作者：诺达斯]</view>
+<view class="search-details-mid-collect"><icon class="iconfont icon-shoucang" bindtap="collectArticle"/></view>
+
+</view>
+<view class="search-details-bottom">
+<template is="wxParse" data="{{wxParseData:searchDetailsContent.nodes}}"/>
+</view>
+
+</view>
+
+<view class="search-details-record" >
+<text class="search-details-record-tag" wx:for="{{searchLinkTag}}">{{item}}</text>
+</view>
+
+</view>
+
+
+<view class="search-details-fixed-bottom">
+<view class="fixed-share-friends">分享好友</view>
+<view class="fixed-generate-poster">生成海报</view>
+</view>
+
+</view>

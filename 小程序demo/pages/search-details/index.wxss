@@ -1,1 +1,114 @@
 /* pages/search-details/index.wxss */
+@import "/wxParse/wxParse.wxss";
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.search-details-main {
+  width: 100%;
+  height: 100%;
+}
+
+.search-flex-range {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-details-text {
+  flex: 1;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.search-details-top {
+  height: 100rpx;
+  /* background-color: olivedrab; */
+  font-size: 37rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-weight: 700;
+}
+
+.search-details-mid-tag {
+  flex: 8.5;
+  /* background-color: royalblue; */
+   width: 100%;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+}
+
+.search-details-mid-collect {
+  flex: 1.5;
+  /* background-color: sienna; */
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.search-details-mid {
+  height: 60rpx;
+  /* background-color: pink; */
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom:1rpx dashed #808080;
+  padding-bottom: 10rpx;
+ 
+}
+
+.search-details-bottom {
+  flex: 1;
+  /* background-color: purple; */
+  overflow:auto;
+  padding-top: 20rpx;
+}
+
+.search-details-record {
+  /* background-color: pink; */
+  width: 100%;
+  height: 60rpx;
+  padding-bottom: 80rpx;
+}
+
+.search-details-record-tag
+{
+  background-color: #efeff4;
+  display: inline-block;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+}
+
+
+.search-details-fixed-bottom {
+  position: fixed;
+  width: 100%;
+  height: 80rpx;
+  bottom: 0;
+  background-color: yellow;
+  display: flex;
+  flex: row;
+}
+
+.fixed-share-friends {
+  flex: 1;
+  background-color: orange;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.fixed-generate-poster {
+  flex: 1;
+  background-color: brown;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}

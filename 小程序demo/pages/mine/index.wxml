@@ -1,2 +1,42 @@
 <!--pages/tourism/index.wxml-->
-<text>pages/tourism/index.wxml</text>
+<view class="mine-main">
+
+<view class="mine-avatar">
+<view class="mine-avatar-show">
+<view class="mine-avatar-show-border-radius">
+<image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJLC8PUibuQKpdOfiaWiaaicppWrUOlibNACs5NegItiaslCTo2tqKSEGgibh4CnBib3zJl695Yibf9tia1cdsA/132" class="avatar-img"></image>
+</view>
+</view>
+<view class="mine-nickname-show">鲸落</view>
+</view>
+
+
+<view class="mine-watch-history">
+
+<view class="mine-watch-history-top">
+<view class="mine-watch-history-content">历史记录</view>
+
+<view class="mine-watch-history-showmore">
+<view class="mine-watch-history-showmore-title">查看更多</view>
+<view class="mine-watch-history-showmore-iocn"><icon class="iconfont icon-gengduo icon-gengduo-size"/></view>
+</view>
+
+</view>
+<view class="mine-watch-history-bottom">历史记录的内容</view>
+
+</view>
+
+<view class="mine-collection">
+<view class="mine-collection-top">
+<view class="mine-collection-title">我的收藏</view>
+<view class="mine-collection-showmore">查看更多</view>
+</view>
+
+<view class="mine-collection-bottom">我的收藏的东西</view>
+
+</view>
+
+
+<view class="addvice-feedback">意见反馈</view>
+
+</view>

@@ -49,14 +49,14 @@ page {
 }
 
 .mine-watch-history {
-  height: 250rpx;
-  /* background-color: pink; */
+  height: 280rpx;
   display: flex;
   flex-direction: column;
+  border-bottom: 1rpx solid #cdcdcd;
 }
 
 .mine-watch-history-top {
-  height: 50rpx;
+  height: 62rpx;
   /* background-color: blueviolet; */
   display: flex;
   flex-direction: row;
@@ -65,82 +65,101 @@ page {
 .mine-watch-history-content {
   flex: 7.8;
   font-size: 25rpx;
-  line-height: 50rpx;
+  line-height: 62rpx;
   padding-left: 10rpx;
 }
 
 .mine-watch-history-showmore {
   flex: 2.2;
-  background-color: gold;
   display: flex;
   flex-direction: row;
-
 }
 
-.mine-watch-history-showmore-title
-{
-  flex: 8.5;
+.mine-watch-history-showmore-title {
+  flex: 7;
   font-size: 25rpx;
-  line-height: 50rpx;
-  padding-left: 10rpx;
+  line-height: 62rpx;
+  padding-left: 20rpx;
+  color: #cdcdcd;
 }
 
-.mine-watch-history-showmore-iocn
-{
-  flex: 1.5;
-  height: 50rpx;
+.mine-watch-history-showmore-iocn {
+  flex: 3;
+  height: 62rpx;
+  line-height: 62rpx;
 }
 
-.icon-gengduo-size
-{
-  font-size: 40rpx !important;
-  height: 50rpx;
+.icon-gengduo-size {
+  font-size: 35rpx !important;
+  color: #cdcdcd !important;
 }
-
-
 
 .mine-watch-history-bottom {
   flex: 1;
-  background-color: rosybrown;
+  display: flex;
+  flex-direction: row;
+}
+
+.mine-watch-history-block {
+  height: 100%;
+  flex: 1;
 }
 
 .mine-collection {
-  height: 250rpx;
-  background-color: indianred;
+  height: 280rpx;
   display: flex;
   flex-direction: column;
   width: 100%;
+  border-bottom: 1rpx solid #cdcdcd;
 }
 
 .mine-collection-top {
-  height: 50rpx;
+  height: 62rpx;
   display: flex;
   flex-direction: row;
 }
 
 .mine-collection-title {
-  flex: 8;
+  flex: 7.8;
   font-size: 25rpx;
-  line-height: 50rpx;
+  line-height: 62rpx;
   padding-left: 10rpx;
 }
 
 .mine-collection-showmore {
-  background-color: indigo;
-  flex: 2;
+  flex: 2.2;
+  display: flex;
+  flex-direction: row;
+}
+
+.mine-collection-showmore-title {
+  flex: 7;
   font-size: 25rpx;
-  line-height: 50rpx;
-  padding-left: 10rpx;
+  line-height: 62rpx;
+  padding-left: 20rpx;
+  color: #cdcdcd;
+}
+
+.mine-collection-showmore-iocn {
+  flex: 3;
+  height: 62rpx;
+  line-height: 62rpx;
 }
 
 .mine-collection-bottom {
   flex: 1;
-  background-color: orchid;
+  display: flex;
+  flex-direction: row;
+}
+
+.mine-collection-block {
+  height: 100%;
+  flex: 1;
 }
 
 .addvice-feedback {
   flex: 1;
-  background-color: saddlebrown;
   text-align: center;
   padding-top: 80rpx;
+  font-size: 32rpx;
 }

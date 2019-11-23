@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    historyRecord:['1','2','3'],
+    myCollection:['4','5','6']
 
   },
 

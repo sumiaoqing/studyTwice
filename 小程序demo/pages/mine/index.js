@@ -1,12 +1,24 @@
 // pages/tourism/index.js
+
+
+import {
+  HTTP
+} from '../../utils/http.js'
+
+
+let http = new HTTP()
+
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    historyRecord:['1','2','3'],
-    myCollection:['4','5','6'],
+    historyRecord:[],
+    myCollection:[],
+    watchHistory:[],
     userNickName:'',
     userAvatarUrl:'',
   },
@@ -17,6 +29,24 @@ Page({
   onLoad: function (options) {
     this.setData({ userNickName:wx.getStorageSync('userNickName')})
     this.setData({userAvatarUrl:wx.getStorageSync('userAvatarUrl')})
+    http.request('GET','/personal',{},(res)=>
+    {
+      this.setData({
+        watchHistory: res[0].watchHistory
+      })
+      let postWatchString=''
+      for(let i=0;i<this.data.watchHistory.length;i++)
+      {
+        postWatchString += `${this.data.watchHistory[i].watch_Id},`
+      }
+      postWatchString = postWatchString.slice(0, postWatchString.length-1)
+      http.request('GET', `/personalData/${postWatchString}`,{},(res)=>
+      {
+        this.setData({
+          watchHistory: res
+        })
+      })
+    })
   },
 
   /**

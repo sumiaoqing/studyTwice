@@ -90,25 +90,25 @@ page {
 .search-details-fixed-bottom {
   position: fixed;
   width: 100%;
-  height: 80rpx;
+  height: 70rpx;
   bottom: 0;
-  background-color: yellow;
+  /* background-color: yellow; */
+  border-top:1rpx solid #efeff4;
   display: flex;
   flex: row;
 }
 
 .fixed-share-friends {
   flex: 1;
-  background-color: orange;
-  height: 80rpx;
-  line-height: 80rpx;
+  /* background-color: orange; */
+  line-height: 70rpx;
   text-align: center;
+  border-right:1rpx solid #efeff4;
 }
 
 .fixed-generate-poster {
   flex: 1;
-  background-color: brown;
-  height: 80rpx;
-  line-height: 80rpx;
+  /* background-color: brown; */
+  line-height: 70rpx;
   text-align: center;
 }

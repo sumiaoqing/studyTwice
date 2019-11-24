@@ -15,7 +15,7 @@ let router=express.Router()
 router.post('/sessionApi-add',(req,res)=>
 {
     req.session.username = req.body.sessionApi
- 
+    console.log(req.session.username );
 })
 
 module.exports = router

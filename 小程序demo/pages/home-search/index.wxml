@@ -25,9 +25,9 @@
 
 <view class="search-history-title" >搜索历史</view>
 
-<view class="search-history-content" wx:for="{{searchHistory}}" wx:key="{{item._id}}">
+<view class="search-history-content" wx:for="{{searchHistory[0].searchHistory}}">
 <view class="search-content-left"><icon class="iconfont icon-shizhong" /></view>
-<view class="search-content-middle" bindtap="historyJump" data-historyJump="{{item.searchHistory}}">{{item.searchHistory}}</view>
+<view class="search-content-middle" bindtap="historyJump" data-historyJump="{{item.searchContent}}">{{item.searchContent}}</view>
 <view class="search-content-right" bindtap="deleteSearch" data-deletesearch="{{item._id}}"><icon class="iconfont icon-cross" /></view>
 </view>
 

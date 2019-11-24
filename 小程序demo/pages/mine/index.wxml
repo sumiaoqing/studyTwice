@@ -22,7 +22,10 @@
 </view>
 
 </view>
-<view class="mine-watch-history-bottom"><view class="mine-watch-history-block"  wx:for="{{historyRecord}}">{{item}}</view></view>
+<view class="mine-watch-history-bottom"><view class="mine-watch-history-block"  wx:for="{{watchHistory}}">
+<view class="mine-watch-history-block-img"><view class="mine-watch-history-block-img-show"><image src="{{item.homeImgPath}}" class="watchImg"></image></view></view>
+<view class="mine-watch-history-block-title">{{item.homeTitle}}</view>
+</view></view>
 
 </view>
 

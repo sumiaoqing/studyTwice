@@ -30,6 +30,7 @@ Page({
   //获取个人记录的接口
   getPersonal: function() {
     http.request('GET', '/personal', {}, (res) => {
+      console.log(res)
       this.setData({
         searchHistory: res
       })

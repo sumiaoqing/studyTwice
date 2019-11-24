@@ -40,6 +40,8 @@ Page({
           isCollected: false
         })
       }
+      let _this = this;
+      wxParse('searchDetailsContent', 'html', this.data.singleHomeData.homeComment, _this)
     })
   },
 
@@ -52,8 +54,6 @@ Page({
       _id: options.clickContent
     })
     this.getSingleHomeData(options)
-    let _this = this;
-    let a = wxParse('searchDetailsContent', 'html', this.data.searchDetailsContent, _this)
   },
 
   /**

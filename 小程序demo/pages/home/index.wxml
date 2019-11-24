@@ -16,7 +16,7 @@
 
       <view class="top-tab-control">
         <view class=' {{currentData==0?"tabSelected":""}} popular-left' data-current="0" bindtap="selectCurrentData">热门</view>
-        <view class=' {{currentData==1?"tabSelected":""}} handpick-right' data-current="1" bindtap="selectCurrentData">精选</view>
+        <view class=' {{currentData==1?"tabSelected":""}} handpick-right' data-current="1" bindtap="selectCurrentData">同人</view>
       </view>
 
       <view class="layout-tab-swiper">

@@ -6,15 +6,17 @@ Page({
    */
   data: {
     historyRecord:['1','2','3'],
-    myCollection:['4','5','6']
-
+    myCollection:['4','5','6'],
+    userNickName:'',
+    userAvatarUrl:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({ userNickName:wx.getStorageSync('userNickName')})
+    this.setData({userAvatarUrl:wx.getStorageSync('userAvatarUrl')})
   },
 
   /**

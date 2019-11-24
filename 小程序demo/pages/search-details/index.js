@@ -7,14 +7,40 @@ import {
   emojisInit
 } from '../../wxParse/wxParse.js'
 
+import {
+  HTTP
+} from '../../utils/http.js'
+
+
+let http = new HTTP()
+let user = wx.getStorageSync('userNickName')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    searchDetailsContent: '<p><strong style=\"color: rgb(51, 51, 51);\">记得那是一个上午，&nbsp;我们正在上语文课，窗户在教室的左边，窗外的阳光照进来，热且刺眼，&nbsp;我看着她极力用本子 当着阳光，我就站了起来，&nbsp;老师问我怎么了？我说有点困，站着听课好一点，&nbsp;那可是上午第二节课，怎么会困呢。。&nbsp;只不过想用自己的身体挡住阳光，让她在我的影子里能够舒服一些。</strong></p></br><p><strong style=\"color: rgb(51, 51, 51);\">记得那是一个上午，&nbsp;我们正在上语文课，窗户在教室的左边，窗外的阳光照进来，热且刺眼，&nbsp;我看着她极力用本子 当着阳光，我就站了起来，&nbsp;老师问我怎么了？我说有点困，站着听课好一点，&nbsp;那可是上午第二节课，怎么会困呢。。&nbsp;只不过想用自己的身体挡住阳光，让她在我的影子里能够舒服一些。</strong></p></br><p><strong style=\"color: rgb(51, 51, 51);\">记得那是一个上午，&nbsp;我们正在上语文课，窗户在教室的左边，窗外的阳光照进来，热且刺眼，&nbsp;我看着她极力用本子 当着阳光，我就站了起来，&nbsp;老师问我怎么了？我说有点困，站着听课好一点，&nbsp;那可是上午第二节课，怎么会困呢。。&nbsp;只不过想用自己的身体挡住阳光，让她在我的影子里能够舒服一些。</strong></p>',
-  searchLinkTag:['骚套路','国服上分','大神专用','教你怎么玩劫']
+    singleHomeData: {}, //单个页面的数据
+    isCollected: true,
+    _id: '',
+  },
+  //获取单个数据的接口
+  getSingleHomeData(options) {
+    http.request('GET', `/singleHomeData/${options.clickContent}`, {}, (res) => {
+      this.setData({
+        singleHomeData: res
+      })
+      if (res.homeCollectCount.collectUser.includes(user)) {
+        this.setData({
+          isCollected: true
+        })
+      } else {
+        this.setData({
+          isCollected: false
+        })
+      }
+    })
   },
 
   /**
@@ -22,10 +48,12 @@ Page({
    */
   onLoad: function(options) {
     //然后调用详情页的接口
-    console.log(options)
+    this.setData({
+      _id: options.clickContent
+    })
+    this.getSingleHomeData(options)
     let _this = this;
-    let a=wxParse('searchDetailsContent', 'html', this.data.searchDetailsContent, _this)
-    // console.log(a.searchDetailsContent.nodes);
+    let a = wxParse('searchDetailsContent', 'html', this.data.searchDetailsContent, _this)
   },
 
   /**
@@ -75,11 +103,31 @@ Page({
    */
   onShareAppMessage: function() {
 
-  }
-  ,
+  },
   //点击收藏按钮触发的事件
-  collectArticle:function()
-  {
-    console.log('收藏成功')
+  collectArticle: function() {
+  this.isLike()
+  }, //点赞的取消与否
+  isLike: function() {
+    if (this.data.isCollected == true) {
+      this.data.singleHomeData.homeCollectCount.collectNumber = this.data.singleHomeData.homeCollectCount.collectNumber - 1
+      this.data.singleHomeData.homeCollectCount.collectUser = this.data.singleHomeData.homeCollectCount.collectUser.filter(item => item != user)
+      this.isLikePost()
+      this.setData({
+        isCollected: false
+      })
+    } else {
+      this.data.singleHomeData.homeCollectCount.collectNumber = this.data.singleHomeData.homeCollectCount.collectNumber + 1
+      this.data.singleHomeData.homeCollectCount.collectUser.push(user)
+      this.isLikePost()
+      this.setData({
+        isCollected: true
+      })
+    }
+  }, //是否收藏的接口
+  isLikePost: function() {
+    http.request('POST', `/editSingleHomeDataCollect/${this.data._id}`, this.data.singleHomeData, (res) => {
+      console.log('成功')
+    })
   }
 })

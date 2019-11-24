@@ -24,8 +24,9 @@ App({
           wx.getUserInfo({
             success: res => {
               //获取登陆小程序的人的用户名
-              console.log( JSON.parse(res.rawData))
+              // console.log( JSON.parse(res.rawData))
               wx.setStorageSync('userNickName', JSON.parse(res.rawData).nickName)
+              wx.setStorageSync('userAvatarUrl', JSON.parse(res.rawData).avatarUrl)
               http.request('POST', '/sessionApi-add', {'sessionApi': JSON.parse(res.rawData).nickName})
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo

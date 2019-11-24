@@ -43,5 +43,6 @@
 
 .icon-shoucang-red:before {
   content: "\e667";
+  color: #c6538c;
 }
 

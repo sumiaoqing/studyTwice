@@ -9,12 +9,12 @@
 <view class="search-details-text">
 
 <view class="search-details-top">
-能奶能输出全能辅助 全面解析赛娜技巧
+{{singleHomeData.homeTitle}}
 </view>
 
 <view class="search-details-mid">
-<view class="search-details-mid-tag">[ 2019-11-20 17:59:20 来源：多玩LOL 作者：诺达斯]</view>
-<view class="search-details-mid-collect"><icon class="iconfont icon-shoucang" bindtap="collectArticle"/></view>
+<view class="search-details-mid-tag">{{singleHomeData.homeUploadTime}}    作者：{{singleHomeData.homeNickName}}</view>
+<view class="search-details-mid-collect"><icon class='iconfont {{isCollected==true?"icon-shoucang-red":"icon-shoucang"}}'bindtap="collectArticle"/></view>
 
 </view>
 <view class="search-details-bottom">

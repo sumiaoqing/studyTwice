@@ -1,25 +1,52 @@
-const mongoose=require('mongoose')
+const mongoose = require('mongoose')
 
-let Schema=mongoose.Schema
+let Schema = mongoose.Schema
 
-let homeDataSchema=new Schema(
+let homeDataSchema = new Schema(
     {
-       homeTitle:String,//主页标题
-       homeTag:String,//主页标签
-       homeNickName:String,//主页用户名称
-       homeAvatarUrl:String,
-       homeUploadTime:
+        homeTitle:
         {
-            type:Date,
-            default:Date.now
-        },//上传时间
-        homeRemark:String,//主页备注
-        homeComment:String,//主页内容
-        homeImgPath:String,//主页静态图片
-
+            type: String,
+            required: true,
+        },//文章标题
+        homeTag: {
+            type: String,
+            required: true,
+        },//文章标签
+        homeNickName: {
+            type: String,
+            required: true,
+        },//文章用户名称
+        homeViewCount: {
+            type: Number,
+            required: true,
+        },//文章观看数
+        homeUploadTime:
+        {
+            type: Date,
+            default: Date.now,
+            required: true,
+        }, //上传时间
+        homeCollectCount: {
+            type: Object,
+            required: true,
+        },//文章收藏数字包括个数以及收藏用户的昵称
+        homeProperties: {
+            type: String,
+            required: true,
+        },//文章性质
+        homeRemark: {
+            type: String,
+        },//用户备注
+        homeComment: {
+            type: String,
+            required: true,
+        },//用户内容
+        homeImgPath: {
+            type: String,
+            required: true,
+        },//用户图片
     }
 )
 
-module.exports=mongoose.model('homeData',homeDataSchema,'homeData')
-
-let bj={"homeTitle":"能奶能输出全能辅助 全面解析赛娜技巧", "homeTag":"百万播放","homeNickName":"诺达斯 ","homeUploadTime":"1970-01-01T00:00:01.990Z","homeRemark":"能输出有护盾的超级辅助","homeComment":"　赛娜作为设计师钦定的“第一位射手型辅助”，整体的玩法和技能结构都和其他英雄都很大的区别，他不是一个纯粹的输出型辅助，也不是一个单纯只会奶盾的辅助，设计师很好的把这两点都结合到了赛娜身上。","homeImgPath":"http://localhost:3000/public/home-img/saina.jpeg"}
+module.exports = mongoose.model('homeData', homeDataSchema, 'homeData')

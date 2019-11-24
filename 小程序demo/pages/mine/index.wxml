@@ -4,10 +4,10 @@
 <view class="mine-avatar">
 <view class="mine-avatar-show">
 <view class="mine-avatar-show-border-radius">
-<image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJLC8PUibuQKpdOfiaWiaaicppWrUOlibNACs5NegItiaslCTo2tqKSEGgibh4CnBib3zJl695Yibf9tia1cdsA/132" class="avatar-img"></image>
+<image src="{{userAvatarUrl}}" class="avatar-img"></image>
 </view>
 </view>
-<view class="mine-nickname-show">鲸落</view>
+<view class="mine-nickname-show">{{userNickName}}</view>
 </view>
 
 

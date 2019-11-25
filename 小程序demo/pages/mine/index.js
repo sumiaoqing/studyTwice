@@ -17,7 +17,7 @@ Page({
    */
   data: {
     historyRecord:[],
-    myCollection:[],
+    myFavorite:[],
     watchHistory:[],
     userNickName:'',
     userAvatarUrl:'',
@@ -32,23 +32,51 @@ Page({
     http.request('GET','/personal',{},(res)=>
     {
       this.setData({
-        watchHistory: res[0].watchHistory
+        watchHistory: res[0].watchHistory,
+        myFavorite: res[0].myFavorite
       })
-      let postWatchString=''
-      for(let i=0;i<this.data.watchHistory.length;i++)
-      {
-        postWatchString += `${this.data.watchHistory[i].watch_Id},`
-      }
-      postWatchString = postWatchString.slice(0, postWatchString.length-1)
-      http.request('GET', `/personalData/${postWatchString}`,{},(res)=>
-      {
-        this.setData({
-          watchHistory: res
-        })
+      console.log(this.data.myFavorite)
+      // this.getWatchHistory(this.data.watchHistory)
+      // this.getmyFavorite(this.data.myFavorite)
+     
+    })
+  },
+//历史记录请求接口的操作
+getWatchHistory:function(arr)
+{
+  // let postWatchString = ''
+  // for (let i = 0; i < this.data.watchHistory.length; i++) {
+  //   postWatchString += `${this.data.watchHistory[i].watch_Id},`
+  // }
+  // postWatchString = postWatchString.slice(0, postWatchString.length - 1)
+  let postWatchString = this.getHttpData(arr,'watch_Id')
+  http.request('GET', `/personalData/${postWatchString}`, {}, (res) => {
+    this.setData({
+      watchHistory: res
+    })
+  })
+}
+,
+//收藏夹的请求接口的操作
+  getmyFavorite:function(arr)
+  {
+    let postWatchString = this.getHttpData(arr, 'fileDataId')
+    http.request('GET', `/personalData/${postWatchString}`, {}, (res) => {
+      this.setData({
+        myFavorite: res
       })
     })
   },
-
+  //封装请求多少接口的函数
+  getHttpData: function (arr, property)
+{
+  let postWatchString = ''
+  for (let i = 0; i < arr.length; i++) {
+    postWatchString += `${arr[i][property]},`
+  }
+    postWatchString = postWatchString.slice(0, postWatchString.length - 1)
+    return postWatchString
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

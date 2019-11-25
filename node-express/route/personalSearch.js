@@ -6,7 +6,7 @@ let HomeData=require('../model/homeData')
 router.get('/personal', (req, res) => {
     // console.log( req.session.username)
     // let searchNickName=req.session.username
-    PersonalHistory.find({ searchNickName: "鲸落" }).sort({ searchTime: -1 }).then(data => {
+    PersonalHistory.find({ searchNickName: "鲸落" }).then(data => {
         res.json(data)
     })
 })

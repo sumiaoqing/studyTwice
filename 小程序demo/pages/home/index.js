@@ -39,6 +39,10 @@ this.gethomeData()
   {
     http.request('GET','/homeData',{},(res)=>
     {
+      for(let i=0;i<res.length;i++)
+      {
+        res[i].homeComment=""
+      }
       this.setData({
         homePageAmount:res
       })

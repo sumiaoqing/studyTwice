@@ -2,7 +2,7 @@
 <!-- 引入模板 -->
 <import src="/wxParse/wxParse.wxml"/>
 
-<view class="search-details-main">
+<view class="search-details-main" wx:if="{{!isCanDraw?true:false}}">
 
 <view class="search-flex-range">
 
@@ -31,8 +31,11 @@
 
 
 <view class="search-details-fixed-bottom">
-<view class="fixed-share-friends">分享好友</view>
-<view class="fixed-generate-poster">生成海报</view>
+<view class="fixed-share-friends" ><button open-type='share' class="share-Button">分享好友</button></view>
+<view class="fixed-generate-poster"><button  class="share-Button" bindtap="isShowMask">生成海报</button></view>
+</view>
 </view>
 
+<view wx:if="{{isCanDraw?true:false}}" class="screen-shot-show" >
+<share-box bindcancelScreen="cancelScreen"/>
 </view>

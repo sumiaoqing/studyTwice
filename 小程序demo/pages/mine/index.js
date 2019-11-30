@@ -36,7 +36,7 @@ Page({
         myFavorite: res[0].myFavorite
       })
       console.log(this.data.myFavorite)
-      // this.getWatchHistory(this.data.watchHistory)
+      this.getWatchHistory(this.data.watchHistory)
       // this.getmyFavorite(this.data.myFavorite)
      
     })

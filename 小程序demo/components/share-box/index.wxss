@@ -1,0 +1,59 @@
+/* components/share-box/index.wxss */
+page
+{
+width: 100%;
+height: 100%;
+}
+.screen-shot
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-shot-top
+{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-shot-top-img
+{
+   height: 100%;
+   width: 80%;
+   padding-top: 40rpx;
+}
+
+image
+{
+  width: 100%;
+  height: 100%；
+}
+
+.screen-shot-bottom
+{
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+    border-top:1rpx solid #efeff4;
+}
+
+.screen-shot-bottom-save
+{
+text-align: center;
+line-height: 80rpx;
+flex: 1;
+font-size: 28rpx;
+border-right:1rpx solid #efeff4;
+}
+
+.screen-shot-bottom-cancel
+{
+  text-align: center;
+ line-height: 80rpx;
+ flex: 1;
+ font-size: 28rpx;
+}

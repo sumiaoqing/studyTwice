@@ -28,7 +28,7 @@
 
                 <view class="home-Block-img">
                   <view class="block-img-show">
-                    <image src="{{item. homeImgPath}}" class="img-show"></image>
+                    <image src="{{item.homeImgPath}}" class="img-show"></image>
                   </view>
                 </view>
 

@@ -65,6 +65,8 @@ page {
   /* background-color: purple; */
   overflow:auto;
   padding-top: 20rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
 }
 
 .search-details-record {
@@ -106,9 +108,23 @@ page {
   border-right:1rpx solid #efeff4;
 }
 
+.share-Button
+{
+  max-width: 100%;
+  height: 100%;
+    line-height: 70rpx;
+    font-size: 30rpx;
+}
+
 .fixed-generate-poster {
   flex: 1;
   /* background-color: brown; */
   line-height: 70rpx;
   text-align: center;
+}
+
+.screen-shot-show
+{
+  width: 100%;
+  height: 100%;
 }

@@ -1,0 +1,24 @@
+<!--components/share-box/index.wxml-->
+<view class="screen-shot">
+
+<view class="screen-shot-top">
+
+<view class="screen-shot-top-img">
+ <image mode="widthFix" src="{{sharePath}}"  />
+</view>
+
+
+</view>
+
+<view class="screen-shot-bottom">
+<view class="screen-shot-bottom-save" bindtap="savePic">保存</view>
+<view class="screen-shot-bottom-cancel" bindtap="cancelScreenShot">退出</view>
+</view>
+
+
+
+
+
+</view>
+
+<painter  palette="{{imgDraw}}" bind:imgOK="onImgOk"  style="position: absolute; top: -9999rpx;" />

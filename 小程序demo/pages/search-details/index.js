@@ -16,7 +16,6 @@ let http = new HTTP()
 let user = wx.getStorageSync('userNickName')
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -24,6 +23,7 @@ Page({
     singleHomeData: {}, //单个页面的数据
     isCollected: true,
     _id: '',
+    isCanDraw: false//判断是否展示
   },
   //获取单个数据的接口
   getSingleHomeData(options) {
@@ -102,7 +102,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+   return {
+     title:'峡谷资讯',
+     desc:'分享峡谷趣事动态',
+     path:'/page/search-details'
+   }
   },
   //点击收藏按钮触发的事件
   collectArticle: function() {
@@ -128,6 +132,19 @@ Page({
   isLikePost: function() {
     http.request('POST', `/editSingleHomeDataCollect/${this.data._id}`, this.data.singleHomeData, (res) => {
       console.log('成功')
+    })
+  }
+  ,//创建生成海报界面
+  isShowMask:function()
+  {
+    this.setData({
+      isCanDraw: !this.data.isCanDraw
+    })
+  },
+  cancelScreen:function()
+  {
+    this.setData({
+      isCanDraw: !this.data.isCanDraw
     })
   }
 })

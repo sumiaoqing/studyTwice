@@ -3,4 +3,6 @@
     "study-cmp":"/components/study/index"
     
   }
+  ,
+  "enablePullDownRefresh": true
 }

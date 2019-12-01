@@ -23,7 +23,8 @@ Page({
     singleHomeData: {}, //单个页面的数据
     isCollected: true,
     _id: '',
-    isCanDraw: false//判断是否展示
+    isCanDraw: false,//判断是否展示
+    guessYouLike:['金教练','选手','skt','S10大满贯']
   },
   //获取单个数据的接口
   getSingleHomeData(options) {

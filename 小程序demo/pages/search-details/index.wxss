@@ -67,13 +67,30 @@ page {
   padding-top: 20rpx;
   padding-left: 10rpx;
   padding-right: 10rpx;
+   border-bottom:1rpx solid #efeff4;
 }
 
 .search-details-record {
   /* background-color: pink; */
   width: 100%;
   height: 60rpx;
-  padding-bottom: 80rpx;
+  padding-bottom: 60rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.search-details-record-left
+{
+  flex: 2;
+  padding-left: 10rpx;
+  font-size: 30rpx;
+  color: #808080;
+  padding-top: 5rpx;
+}
+
+.search-details-record-right
+{
+  flex: 8;
 }
 
 .search-details-record-tag
@@ -84,8 +101,10 @@ page {
   padding-right: 10rpx;
   margin-right: 10rpx;
   margin-left: 10rpx;
-  border-radius: 15rpx;
-  font-size: 28rpx;
+  border-radius: 10rpx;
+  font-size: 25rpx;
+  color: #808080;
+  
 }
 
 

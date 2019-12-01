@@ -24,7 +24,8 @@
 </view>
 
 <view class="search-details-record" >
-<text class="search-details-record-tag" wx:for="{{searchLinkTag}}">{{item}}</text>
+<view class="search-details-record-left">猜你喜欢 </view>
+<view class="search-details-record-right"><text class="search-details-record-tag" wx:for="{{guessYouLike}}">{{item}}</text></view>
 </view>
 
 </view>

@@ -16,6 +16,36 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     currentData: 0,
     homePageAmount: [],
+    currentPage:1,
+    size:4,
+  },
+  //上拉加载更多
+  onReachBottom:function()
+  {
+     let _this=this
+    wx.showLoading({
+      title: '玩命加载中',
+    })
+    _this.setData({
+      currentPage:_this.data.currentPage+1
+    })
+    this.gethomeData(this.data.currentPage, this.data.size)
+    wx.hideLoading();
+  },
+  //下拉刷新
+  onPullDownRefresh:function()
+  {
+    console.log('666')
+    let _this = this
+    wx.showLoading({
+      title: '刷新中',
+    })
+    _this.setData({
+      currentPage:  1
+    })
+    this.gethomeData(this.data.currentPage, this.data.size)
+    wx.hideLoading();
+    wx.stopPullDownRefresh();
   },
   onStudy: function() {
     // 传递单个参数
@@ -25,26 +55,26 @@ Page({
     // })
 
     //传递对象
-    wx.navigateTo({
-      url: '../about/index?testobj=' + JSON.stringify(this.data.testObj)
-    })
+    // wx.navigateTo({
+    //   url: '../about/index?testobj=' + JSON.stringify(this.data.testObj)
+    // })
   },
   onLoad: function() {
 
-this.gethomeData()
+this.gethomeData(this.data.currentPage,this.data.size)
 
   },
   //获取主页数据的homeData接口
-  gethomeData()
+  gethomeData(currentPage,size)
   {
-    http.request('GET','/homeData',{},(res)=>
+    http.request('GET', `/homeData/${currentPage}/${size}`,{},(res)=>
     {
       for(let i=0;i<res.length;i++)
       {
         res[i].homeComment=""
       }
       this.setData({
-        homePageAmount:res
+        homePageAmount:res.data
       })
     })
   },

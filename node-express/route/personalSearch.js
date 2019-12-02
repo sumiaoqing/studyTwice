@@ -2,11 +2,13 @@ let express = require('express')
 let router = express.Router()
 let PersonalHistory = require('../model/personalHistory')
 let HomeData=require('../model/homeData')
+let Lodash=require('lodash')
 
 router.get('/personal', (req, res) => {
     // console.log( req.session.username)
     // let searchNickName=req.session.username
     PersonalHistory.find({ searchNickName: "鲸落" }).then(data => {
+        data.watchHistory=Lodash._.orderBy(data.watchHistory,['watchTime'],['desc'])
         res.json(data)
     })
 })
@@ -40,5 +42,55 @@ router.delete('/personal-delete', (req, res) => {
         console.log('清除历史记录')
     })
 })
+
+//插入_id值到历史记录
+router.post('/insertWatchHistory/:id', (req, res) => {
+    let isExist=false
+    // console.log(req.body)
+    PersonalHistory.find({searchNickName: "鲸落"}).then(data => {
+        res.json(data[0].watchHistory)
+        // for(let i=0;i<data[0].watchHistory.length;i++)
+        // {
+        //        if(data[0].watchHistory[i].watch_Id==req.params.id)
+        //        {
+        //            isExist=true
+        //            console.log('00000')
+        //        }
+        //        console.log(data[0].watchHistory[i])
+        // }
+        console.log(Lodash._.find(data[0].watchHistory),{"watch_Id":req.params.id})
+ if(Lodash._.find(data[0].watchHistory),{"watch_Id":req.params.id})
+ {
+    isExist=true
+ }
+
+
+       if(isExist==true)
+       {
+          data[0].watchHistory=Lodash._.filter(data[0].watchHistory,function(item)
+          {
+              return item.watch_Id!=req.params.id
+          })
+           data[0].watchHistory.push(req.body)
+           PersonalHistory.findByIdAndUpdate({ _id: data[0]._id }, { $set: {"watchHistory":data[0].watchHistory} }, { new: true }).then(Profile => 
+           {
+               console.log('777')
+               res.json(Profile)
+           } 
+           )
+       }else
+       {
+           console.log('888')
+           res.json(data)
+       }
+    })
+    // PersonalHistory.findByIdAndUpdate({ _id: req.params.id }, { $set: req.body }, { new: true }).then(Profile => res.json(Profile))
+    // // HomeData.findByIdAndUpdate({_id:req.params.id},{$set:{homeCollectCount:{"collectNumber":1,"collectUser":['黄成']}}},{new:true}).then(Profile=>res.json(Profile))
+})
+
+
+
+
+
 
 module.exports = router

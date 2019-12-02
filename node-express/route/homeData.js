@@ -28,9 +28,6 @@ router.get('/homeData/:currentPage/:size', (req, res) => {
             jsonArray = { "totalPage": data.length, data: resPage }
             res.json(jsonArray)
         })
-
-
-
     }).catch(err => console.log(err))
 })
 

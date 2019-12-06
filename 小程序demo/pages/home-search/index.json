@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "search-bar-cmp": "/components/search-bar/index"
+    "search-bar-cmp": "/components/search-bar/index",
+    "study-cmp": "/components/study/index"
   }
 }

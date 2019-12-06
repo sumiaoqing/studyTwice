@@ -9,14 +9,14 @@ let http = new HTTP()
 Component({
   // 组件的属性列表
   properties: {
-    hah1: Array
+    hah1: String
   },
 
   /**
    * 页面的初始数据
    */
   data: {
-    hah: 'hffh',
+    // hah: 'hffh',
     save:'',
     arr: []
   },

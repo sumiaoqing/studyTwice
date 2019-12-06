@@ -33,5 +33,7 @@
 
 <view class="clear-history-message" bindtap="isClearHistory">清除搜索历史</view>
 
+<study-cmp hah1="{{study}}"/>
+
 </view>
 </view>

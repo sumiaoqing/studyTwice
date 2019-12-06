@@ -46,7 +46,9 @@
 
             </view>
           </swiper-item>
-          <swiper-item class="swiper-module">精选内容</swiper-item>
+          <swiper-item class="swiper-module">
+          <study-cmp hah1="{{study}}"/>
+          </swiper-item>
         </swiper>
       </view>
 

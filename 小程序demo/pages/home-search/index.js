@@ -15,7 +15,8 @@ Page({
   data: {
     everybodySearch: [],
     searchHistory: [],
-    isSearchExist: true
+    isSearchExist: true,
+    study:'pppp'
   },
 
   /**

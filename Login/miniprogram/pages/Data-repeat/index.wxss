@@ -1,1 +1,33 @@
 /* miniprogram/pages/Data-repeat/index.wxss */
+
+page
+{
+  width: 100%;
+  height: 100%;
+}
+.main {
+  display: flex;
+  width: 750rpx;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* margin: 20rpx auto; */
+  background-color: red;
+  /* height: auto; */
+  /* align-content: baseline; */
+}
+ .main view {
+            width: 132rpx;
+            height: 250rpx;
+            display: inline-block;
+            background-color: #666;
+            /* margin: 4prx; */
+        }
+
+.main .emp{
+            height: 0;
+            border: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            visibility: hidden;
+        }
+

@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/Data-repeat/index",
+    "pages/Canvas/index",
     "pages/test/index",
     "pages/index/index",
     "pages/userConsole/userConsole",
@@ -14,7 +16,7 @@
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
     "pages/im/room/room"
-   
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -25,10 +27,9 @@
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",
-  "permission":{
-    "scope.userLocation":
-    {
-      "desc":"你的位置信息将用于小程序位置接口的效果展示"
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
   }
 }

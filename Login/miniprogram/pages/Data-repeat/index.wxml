@@ -1,0 +1,6 @@
+<!--miniprogram/pages/Data-repeat/index.wxml-->
+<text>miniprogram/pages/Data-repeat/index.wxml</text>
+
+<view wx:for="{{data}}">
+  <view wx:for> </view>
+</view>

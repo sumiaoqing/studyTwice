@@ -1,0 +1,13 @@
+<!--miniprogram/pages/Canvas/index.wxml-->
+
+<!-- 一个盒子包裹2个canvas以及文字盒子；
+盒子使用相对定位作为父级，flex布局，设置居中；
+一个canvas，使用绝对定位作为背景，canvas-id="canvasProgressbg"
+另一个canvas，使用相对定位作为进度条，canvas-id="canvasProgress" -->
+
+<view class="container">
+
+ <canvas class="progress_bg"   canvas-id="canvasProgressbg">  </canvas> 
+        <canvas class="progress_canvas"   canvas-id="canvasProgress">  </canvas> 
+
+</view>

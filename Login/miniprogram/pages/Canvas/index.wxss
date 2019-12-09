@@ -1,0 +1,21 @@
+/* miniprogram/pages/Canvas/index.wxss */
+
+.container
+{
+  width: 440rpx;
+  height: 440rpx;
+  background-color: #eee;
+  position: relative;
+}
+
+.progress_bg{
+  position: absolute;
+    width:220px;
+  height: 220px; 
+}
+.progress_canvas{ 
+  width:220px;
+  height: 220px; 
+} 
+
+/* https://segmentfault.com/a/1190000013219501 */

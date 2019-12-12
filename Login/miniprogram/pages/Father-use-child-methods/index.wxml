@@ -1,0 +1,4 @@
+<!--miniprogram/pages/Father-use-child-methods/index.wxml-->
+<text>miniprogram/pages/Father-use-child-methods/index.wxml</text>
+
+<child id="children"  bind:myevent="fatherSay" />

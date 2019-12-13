@@ -2,7 +2,7 @@ const http = require('http')
 const WebSocketServer = require('websocket').server
 
 const httpServer = http.createServer((request, response) => {
-    console.log('[' + new Date + '] Received request for ' + request.url)
+    // console.log('[' + new Date + '] Received request for ' + request.url)
     response.writeHead(404)
     response.end()
 })
@@ -14,14 +14,21 @@ const wsServer = new WebSocketServer({
 
 wsServer.on('connect', connection => {
     connection.on('message', message => {
-        console.log(message)
-        if (message.type === 'utf8') {
-            console.log('来自小程序的信息 ' + message.utf8Data)
-            connection.sendUTF('[from server] ' + message.utf8Data)
+        if (message.type === 'utf8'&&JSON.parse(message.utf8Data).data.code==101) {
+            console.log('99999')
+            connection.sendUTF( JSON.stringify({"msg":"开柜回馈","code":101,"success":0}))
+ 
+            setTimeout(()=>
+            {
+                connection.sendUTF( JSON.stringify({"msg":"关柜回馈","code":102,"success":0,"getBook":[{},{}],"saveBook":[{},{}]}))
+            },1000000000)
+
+
         }
-    }).on('close', (reasonCode, description) => {
-        console.log('[' + new Date() + '] Peer ' + connection.remoteAddress + ' disconnected.')
     })
+    // .on('close', (reasonCode, description) => {
+    //     console.log('[' + new Date() + '] Peer ' + connection.remoteAddress + ' disconnected.')
+    // })
 })
 
 httpServer.listen(8080, () => {

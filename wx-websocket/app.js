@@ -21,7 +21,12 @@ wsServer.on('connect', connection => {
             setTimeout(()=>
             {
                 connection.sendUTF( JSON.stringify({"msg":"关柜回馈","code":102,"success":0,"getBook":[{},{}],"saveBook":[{},{}]}))
-            },1000000000)
+            },10000)
+
+            setTimeout(()=>
+            {
+                connection.sendUTF( JSON.stringify( {"msg":"借还回馈","code":105,"amount":10,"data":{},"success":0}))
+            },20000)
 
 
         }

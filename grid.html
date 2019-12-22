@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.contain
+{
+    display: grid;
+    width: 600px;
+    height: 900px;
+    overflow-y: auto;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:400px 400px 400px; 
+    grid-template-areas:
+    "元素 元素 元素",
+    "元素 元素 元素",
+    "元素 元素 元素";
+    background-color: rosybrown;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.child
+{
+  grid-area: "元素";
+  background-color: red;
+}
+
+</style>
+<body>
+    <div class="contain">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+</body>
+
+</html>

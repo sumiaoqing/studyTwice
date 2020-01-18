@@ -7,7 +7,12 @@ const routes = [
   {
     path:'/home',
     name:'home',
-    component:()=>import(/* webpackChunkName: "name" */ '@/components/Screen-Home/screen-home.vue'),
+    component:()=>import(/* webpackChunkName: "home" */ '@/components/Screen-Home/screen-home.vue'),
+    children:[{path:'yaoji',name:'yaoji',
+    component:()=>import(/* webpackChunkName: "yaoji" */ '@/components/Screen-Home/yaoji.vue'),
+  },{path:'moling',name:'moling',
+  component:()=>import(/* webpackChunkName: "moling" */ '@/components/Screen-Home/moling.vue'),
+}]
   },
   {
     path:'/helloworld',

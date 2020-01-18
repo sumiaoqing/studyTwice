@@ -4,8 +4,14 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const routes:any = [
+const Hello = () => import(/* webpackChunkName: "hello" */ '@/components/HelloWorld.vue')
 
+const routes:any = [
+{
+  name:'hello',
+  path:'/hello',
+  component:Hello
+}
 ]
 
 const router = new VueRouter({

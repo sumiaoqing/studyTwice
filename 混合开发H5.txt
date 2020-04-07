@@ -1,0 +1,13 @@
+安卓：
+1.加载本地assets目录下的静态文件
+wv.loadUrl('file:///xxx.html')
+wv.addJavascriptInterface(this,"android")--让H5调用android的方法
+第一个参数把自身传给js
+第二个参数是this的一个名字
+安卓端调用有无参数的方法：
+1.安卓调用js的方法---分有无参数
+无参数---wv.loadUrl("javascript:message()")
+//"javascript:" + js方法名
+有参数---wv.loadUrl("javascript:message2('"+ name + "')")
+//在安卓调用有参数的函数的时候需要加单引号
+2.

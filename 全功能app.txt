@@ -1,0 +1,23 @@
+1.Takeconfiguration---基本配置界面
+window.toThemeBack----读取ip信息---ip信息的数据格式
+window.toReadVersionBack---版本配置信息数据格式
+
+2.buyDrug---购药页面
+loadShelfByAgentCode---商品信息---数据格式
+转到弹簧道---判断依据
+商品全部分类的数据信息格式
+
+3.Maintain--运维界面 qrcodejs2二维码生成器
+一键补满/清空的数据格式以及处理方式
+切换货架以及备用货架的关系
+
+4.ShoppingCartPay---二维码支付页面
+createOrder---微信，支付宝二维码的需要参数以及工作流程
+购物车列表以及购物车列表详情的数据格式
+
+5.controller.ts中串口日志模板中各参数的作用以及现金交易的运行机制
+
+6.ShoppingCart购物车界面传递过来的数据格式以及购物车增减的商品判断流程
+
+
+
